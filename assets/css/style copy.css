@@ -1,0 +1,216 @@
+  /* Estilos Globais */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f8ede3, #f4dcd7);
+    color: #4a3a34;
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background 0.3s;
+    text-align: center; /* Centraliza o conteúdo da página */
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #f4dcd7, #e89992);
+    color: #4a3a34;
+    padding: 1.5em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o header */
+}
+
+/* Logo */
+.logo {
+    width: 140px;
+    height: auto;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Navegação */
+nav {
+    display: flex;
+    gap: 1.5em;
+}
+
+nav a {
+    color: #4a3a34;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5em 0;
+    position: relative;
+    transition: color 0.3s;
+}
+
+/* Seções */
+.section {
+    padding: 4em 2em;
+    text-align: center;
+    margin: 1em auto;
+    max-width: 1200px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s ease-in-out;
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section h2 {
+    font-size: 2.5em;
+    color: #d99286;
+    margin-bottom: 1em;
+}
+
+/* Serviços */
+#services .service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.card {
+    background-color: #fff8f5;
+    padding: 2em;
+    width: calc(33% - 1em);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    text-align: center;
+}
+
+.card:hover {
+    transform: none; /* Remove o efeito hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: #d99286;
+    margin-bottom: 0.5em;
+    font-size: 1.4em;
+}
+
+.card p {
+    font-size: 0.95em;
+    color: #4a3a34;
+}
+
+.gallery {
+    display: flex;
+    overflow-x: auto;
+    padding: 2em 0;
+    gap: 1em;
+    scroll-behavior: smooth;
+    justify-content: center; /* Centraliza a galeria */
+}
+
+.gallery img {
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Depoimentos */
+.testimonial {
+    background-color: #f8ebe8;
+    padding: 1.5em;
+    margin: 1em auto;
+    max-width: 600px;
+    font-style: italic;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    color: #4a3a34;
+    font-size: 1.1em;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #4a3a34;
+    color: #fefefe;
+    text-align: center;
+    padding: 1.5em;
+    font-size: 0.9em;
+    position: relative;
+    margin-top: 2em;
+}
+
+.footer iframe {
+    width: 80%; /* Mapa ocupa 80% da largura */
+    height: 200px; /* Reduzindo a altura do mapa */
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 1em; /* Distância do topo do rodapé */
+}
+
+.footer a {
+    color: #e3c5c0;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #f4dcd7;
+}
+
+/* Ícones de Redes Sociais */
+.social-icons {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    padding-top: 0.5em;
+}
+
+.social-icons a {
+    color: #fefefe;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #e89992;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        max-width: 90%;
+    }
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+    .logo {
+        width: 100px;
+    }
+}
